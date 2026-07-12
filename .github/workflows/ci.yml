@@ -12,8 +12,20 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            
             - name: Run tests
               run: |
                 echo "Running tests..."
                 # Add your test commands here 
                 ls -la
+            
+            - name: Installer Python
+              uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
+              with:
+                python-version: '3.12'
+
+            - name: Installer les dépendances
+              run: pip install -r requirements.txt
+
+            - name: Lancer les tests
+              run: pytest
