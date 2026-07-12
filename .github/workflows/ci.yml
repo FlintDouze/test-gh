@@ -9,7 +9,7 @@ on: [
 
 jobs:
     test:
-        runs-on: kind-runners
+        runs-on: arc-runner-set
         steps:
             - uses: actions/checkout@v3
             
