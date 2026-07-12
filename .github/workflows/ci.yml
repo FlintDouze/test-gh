@@ -29,3 +29,9 @@ jobs:
 
             - name: Lancer les tests
               run: pytest
+
+            - name: Kubectl tool installer
+              uses: Azure/setup-kubectl@v4.0.0
+
+            - name: kubectl get pods
+              run: kubectl get pods --all-namespaces
