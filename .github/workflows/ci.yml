@@ -35,3 +35,8 @@ jobs:
 
             - name: kubectl get pods
               run: kubectl get pods --all-namespaces
+
+            - name: run action
+              uses: FlintDouze/test-action@main
+              with:
+                who-to-greet: "test"
