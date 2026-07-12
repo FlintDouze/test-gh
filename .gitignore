@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Kubernetes config files
+.kubeconfig/
+
 # C extensions
 *.so
 
