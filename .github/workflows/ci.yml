@@ -38,5 +38,9 @@ jobs:
 
             - name: run action
               uses: FlintDouze/test-action@main
+              id: action
               with:
                 who-to-greet: "test"
+
+            - name: show output
+              run: echo "${{ steps.action.outputs.time }}"
